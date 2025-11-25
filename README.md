@@ -40,20 +40,6 @@ All logic, memory management, and algorithmic behavior is written from scratch t
 
 ---
 
-mkdir -p Animals-Simulation/src Animals-Simulation/include Animals-Simulation/data
-mkdir -p Dynamic-Array/src Dynamic-Array/include Dynamic-Array/data
-mkdir -p Linked-List/src Linked-List/include Linked-List/data
-mkdir -p Recursion-Algorithms/src Recursion-Algorithms/include Recursion-Algorithms/data
-mkdir -p Backtracking-Engine/src Backtracking-Engine/include Backtracking-Engine/data
-mkdir -p Maze-Solver/src Maze-Solver/include Maze-Solver/data
-mkdir -p Graph-Toolkit/src Graph-Toolkit/include Graph-Toolkit/data
-mkdir -p Hash-Tables/src Hash-Tables/include Hash-Tables/data
-mkdir -p Priority-Queue-and-Heap/src Priority-Queue-and-Heap/include Priority-Queue-and-Heap/data
-mkdir -p Sets-and-Maps/src Sets-and-Maps/include Sets-and-Maps/data
-mkdir -p Cells/src Cells/include Cells/data
-mkdir -p Balancing-Act/src Balancing-Act/include Balancing-Act/data
-
-
 ##  Build Instructions
 
 All projects are standard ISO C++ (C++17 or higher recommended).
