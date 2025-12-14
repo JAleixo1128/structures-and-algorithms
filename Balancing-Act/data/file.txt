@@ -1,0 +1,49 @@
+Variables:
+data: An integer value stored in each node (e.g., 5, 10). This is the value of the node in the tree.
+left: A pointer/reference to the left child of the node. It connects to smaller values.
+right: A pointer/reference to the right child of the node. It connects to larger values.
+color: A true/false value (Boolean) indicating the color of the node. Red (true) means the node is new, and Black (false) indicates stability.
+Components:
+1. Node Class (LLRBTNode):
+Purpose: Represents a single unit in the tree.
+What it does: Stores the node's value, left and right connections, and its color (red or black).
+2. Tree Class (LLRBTree):
+Purpose: Manages the entire tree and its operations (inserting, balancing, traversing).
+What it does: Starts with an empty tree and allows nodes to be added while keeping the tree balanced.
+Functions:
+Insert Function:
+Purpose: Adds a new value into the tree.
+How it works:
+Finds the correct position for the new value.
+Adds it as a red (temporary) node.
+Fixes the tree if it becomes unbalanced.
+Balancing Functions:
+Rotate Left:
+Purpose: Fixes situations where the right child is red and causes imbalance.
+How it works: Makes the right child the parent and adjusts the tree connections.
+Rotate Right:
+Purpose: Fixes situations where the left child and its left child are red.
+How it works: Makes the left child the parent and adjusts the tree connections.
+Flip Colors:
+Purpose: Fixes cases where both children are red.
+How it works: Changes the current node to red and its children to black.
+Balance:
+Purpose: Ensures the tree is balanced after every insertion.
+How it works: Uses Rotate Left, Rotate Right, and Flip Colors based on node relationships.
+Traversal Functions:
+Preorder:
+Purpose: Prints the nodes starting from the current one, then moves left, then right.
+Use: Helps understand the structure of the tree from top to bottom.
+Inorder:
+Purpose: Prints nodes from smallest to largest by visiting the left child, then current node, then right child.
+Use: Verifies the tree is sorted correctly.
+Postorder:
+Purpose: Visits the left child, then the right child, then the current node.
+Use: Useful for deleting or analyzing subtrees.
+Height Function:
+Purpose: Measures the distance from the current node to the farthest leaf node.
+How it works:
+Recursively checks the height of the left and right subtrees.
+Returns the larger value + 1.
+
+
