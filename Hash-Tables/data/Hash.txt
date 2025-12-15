@@ -1,0 +1,54 @@
+Variables
+mode: Integer
+Specifies the collision resolution strategy:
+0: Linear Probing
+1: Double Hashing
+2: Separate Chaining
+table: Vector of integers
+Stores hash table values for Linear Probing and Double Hashing.
+chain_table: Vector of lists
+Stores hash table values for Separate Chaining.
+table_size: Integer
+Current size of the hash table.
+num_elements: Integer
+Tracks the total number of elements in the table.
+num_collisions: Integer
+Counts the total number of collisions during insertion.
+Functions
+Constructor
+Type: Initialization
+Purpose: Initialize the hash table with a size of 16 and set variables (table, chain_table, num_elements, num_collisions) based on the selected mode.
+resize_table()
+Type: Private Function
+Purpose: Double the size of the table when the load factor (number of elements ÷ table size) exceeds 70%. Rehash all existing elements into the new table.
+h1(key)
+Type: Helper Function
+Purpose: Calculate the primary hash value (key % table_size).
+h2(key)
+Type: Helper Function
+Purpose: Calculate the secondary hash value for Double Hashing (key^2 % TABLE_PRIME).
+insert(key)
+Type: Public Function
+Purpose: Insert a key into the hash table based on the mode:
+Linear Probing: Check the next available slot.
+Double Hashing: Use a secondary hash to resolve collisions.
+Separate Chaining: Append the key to a list at the hash index.
+Increment num_collisions for every collision during insertion.
+print_table()
+Type: Public Function
+Purpose: Print the current state of the hash table. For Separate Chaining, display all keys in each list.
+get_num_collisions()
+Type: Public Function
+Purpose: Return the total number of collisions encountered so far.
+Steps of Execution
+Initialize Hash Table
+Create the hash table based on the mode and initialize variables.
+Insert Values
+Read values from the input file and insert them into the hash table.
+Resize if Necessary
+Before each insertion, check if the table exceeds 70% capacity. If so, resize and rehash.
+Track Collisions
+During insertion, count the collisions caused by hash function conflicts.
+Print the Hash Table
+Display the table’s current state and the total number of collisions.
+
